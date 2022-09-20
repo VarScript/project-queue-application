@@ -6,13 +6,13 @@ const ticketControl = new TicketControl();
 
 const socketController = (socket) => {
     
-    socket.on('send-message', ( payload, callback ) => {
-        
-        const id = 123456;
-        callback(id);
-        
-        socket.broadcast.emit('sent-message', payload );
+    socket.emit('last-ticket', ticketControl.last);
 
+    socket.on('next-ticket', ( payload, callback ) => { 
+        const next = ticketControl.next();
+        callback( next );   
+
+        // Notify new ticket
     });
 }
 
