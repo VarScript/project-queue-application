@@ -2,6 +2,8 @@
 
 const lblDesktop = document.querySelector('h1');
 const btnServe   = document.querySelector('button');
+const divAlert   = document.querySelector('.alert');
+const lblTicket  = document.querySelector('small');
 
 
 
@@ -15,6 +17,7 @@ if ( !searchParams.has('desktop') ) {
 const desktop = searchParams.get('desktop');
 lblDesktop.innerText = desktop;
 
+divAlert.style.display = 'none'; 
 
 
 const socket = io();
@@ -32,6 +35,16 @@ socket.on('last-ticket', ( last ) => {
 });
 
 btnServe.addEventListener( 'click', () => {
+
+    socket.emit( 'serve-ticket', { desktop }, ( {ok, ticket, msg} ) => {
+        if ( !ok ) {
+            lblTicket.innerText = `There is no more ticket for serve`
+            return divAlert.style.display = '';
+        } 
+
+        lblTicket.innerText = `Ticket ${ticket.number} `
+        
+    });
         // socket.emit( 'next-ticket', null, ( ticket ) => {
         //     lblNewTicket.innerText = ticket;
         // });

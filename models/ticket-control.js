@@ -54,7 +54,7 @@ class TicketControl {
 
     attendTicket( desktop ) {
         // we have not tickets
-        if ( tickets.length === 0) {
+        if ( this.tickets.length === 0) {
             return null;
         }
 
@@ -63,7 +63,7 @@ class TicketControl {
 
         this.last4.unshift( ticket );
 
-        if ( this.last4 > 4 ) {
+        if ( this.last4.length > 4 ) {
             this.last4.splice(-1,1)
         }
         
