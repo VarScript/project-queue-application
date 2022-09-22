@@ -1,9 +1,10 @@
 // Referencs HTML
 
-const lblDesktop = document.querySelector('h1');
-const btnServe   = document.querySelector('button');
-const divAlert   = document.querySelector('.alert');
-const lblTicket  = document.querySelector('small');
+const lblDesktop  = document.querySelector('h1');
+const btnServe    = document.querySelector('button');
+const divAlert    = document.querySelector('.alert');
+const lblTicket   = document.querySelector('small');
+const lblPendings = document.querySelector('h1#lblPendings')
 
 
 
@@ -30,9 +31,15 @@ socket.on('disconnect', () => {
     btnServe.disabled = true;
 });
 
-socket.on('last-ticket', ( last ) => {
-    // lblNewTicket.innerText = 'Ticket: ' + last;
+socket.on('pending-tickets', ( pending ) => {
+    if ( pending === 0) {
+        lblPendings.style.display = 'none';
+    } else {
+        lblPendings.style.display = '';
+        lblPendings.innerText = pending;
+    }
 });
+
 
 btnServe.addEventListener( 'click', () => {
 
@@ -44,7 +51,8 @@ btnServe.addEventListener( 'click', () => {
 
         lblTicket.innerText = `Ticket ${ticket.number} `
         
-    });
+    });   
+
         // socket.emit( 'next-ticket', null, ( ticket ) => {
         //     lblNewTicket.innerText = ticket;
         // });
