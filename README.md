@@ -1,28 +1,22 @@
 
 <h1 align="center">
-WebSocket
+Queue application
 </h1>
 <p align="center">
-This is an app for connections detect, issue client server message / client server, listen server client message / server client and message broadcast.<br>
+This is a movil application for wait time minimized, agilizate client fluit and present to your clients the option of virtually join to a queue before of reach sucursal physically. This application can asignar Tickets, read Tickets and notify.
+
+It is make with WebSockets in node.js, It is a modern web technology in which there is a continuous connection between the user's browser(client) and the server<br>
 
 </p>
  <br><br>
 
-![](https://res.cloudinary.com/dxwsqccy0/image/upload/v1663696319/Sockets/Screenshot_2022-09-20_124523_rvefgu.png)
-<p align="center">Here we can the server Offline since localhost :) <br><a  href="https://socket-nodejs-varscript.herokuapp.com" target="_blank" class="text-decoration-none text-light ">Go to SocketServer</a>
+![](https://res.cloudinary.com/dxwsqccy0/image/upload/v1663951926/Queue%20application/Screenshot_2022-09-23_115155_tasd2h.png)
+<p align="center"> <br><a  href="" target="_blank" class="text-decoration-none text-light ">Go to Queue application</a>
 <br>
   
  <br><br>
 
-## 🚀 Send message
-![](https://res.cloudinary.com/dxwsqccy0/image/upload/v1663696319/Sockets/Screenshot_2022-09-20_124635_aafbb8.png)
 
-## 🚀 Show message client 2
-![](https://res.cloudinary.com/dxwsqccy0/image/upload/v1663696319/Sockets/Screenshot_2022-09-20_124649_yjd3ht.png)
-
-<p></p>
-
- <br><br>
 ## 🛠Installation & Set Up
 
 
