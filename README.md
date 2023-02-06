@@ -11,7 +11,7 @@ It is make with WebSockets in node.js, It is a modern web technology in which th
  <br><br>
 
 ![](https://res.cloudinary.com/dxwsqccy0/image/upload/v1663951926/Queue%20application/Screenshot_2022-09-23_115155_tasd2h.png)
-<p align="center"> <br><a  href="https://queue-application-varscript.herokuapp.com" target="_blank" class="text-decoration-none text-light ">Go to Queue application</a>
+<p align="center"> <br><a  href="https://project-queue-application-production.up.railway.app" target="_blank" class="text-decoration-none text-light ">Go to Queue application</a>
 <br>
   
  <br><br>
